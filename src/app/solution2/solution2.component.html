@@ -1,0 +1,10 @@
+<ul>
+  <li>
+    {{ node !== "a" ? "-" + node : node }}
+    <ul>
+      <li *ngFor="let child of getChildren(node); trackBy: trackChld">
+        <app-solution2 [node]="child"></app-solution2>
+      </li>
+    </ul>
+  </li>
+</ul>
